@@ -1,0 +1,42 @@
+﻿@model DC1.Models.Equipe
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+    <h1>Create</h1>
+
+</div>
+
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomEquipe" class="control-label"></label>           <br />
+                <input asp-for="NomEquipe" class="form-control" />
+                <span asp-validation-for="NomEquipe" class="text-danger"></span>           <br />
+            </div>
+            <div class="form-group">
+                <label asp-for="Groupe" class="control-label"></label>           <br />
+                <input asp-for="Groupe" class="form-control" />
+                <span asp-validation-for="Groupe" class="text-danger"></span>           <br />
+            </div>
+            <div class="form-group">
+                <br />
+                <input class="btn btn-outline-dark" type="submit" value="Create" class="btn btn-primary" />           <br />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a class="btn btn-outline-warning" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

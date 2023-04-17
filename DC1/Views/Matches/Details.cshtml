@@ -1,0 +1,70 @@
+﻿@model DC1.Models.Match
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+    <h1>Details</h1>
+
+</div>
+
+<br />
+<div>
+    <h4>Match</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            EquipeA
+        </dt>
+        <br />
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdEquipeANavigation.NomEquipe)
+        </dd>
+        <br />
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ScoreA)
+        </dt>
+        <br />
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ScoreA)
+        </dd>
+        <br />
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ScoreB)
+        </dt>
+        <br />
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ScoreB)
+        </dd>
+        <br />
+        <dt class = "col-sm-2">
+            Arbitre
+        </dt>
+        <br />
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdArbitreNavigation.NomArbitre)
+        </dd>
+        <br />
+     
+        <dt class = "col-sm-2">
+            EquipeB
+        </dt>
+        <br />
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdEquipeBNavigation.NomEquipe)
+        </dd>
+        <br />
+        <dt class = "col-sm-2">
+            Stade
+        </dt>
+        <br />
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdStadeNavigation.NomStade)
+        </dd>
+        <br />
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-dark" asp-action="Edit" asp-route-id="@Model?.IdMatch">Edit</a> 
+    <a class="btn btn-outline-warning" asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,36 @@
+﻿<ul>
+    @foreach (var std in ViewData["Matchs"] as IList<Match>)
+    {
+        <li>
+
+            <td>
+                @Html.DisplayFor(modelItem => std.IdEquipeANavigation.NomEquipe)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => std.ScoreA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => std.ScoreB)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => std.IdEquipeBNavigation.NomEquipe)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => std.IdArbitreNavigation.NomArbitre)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => std.IdStadeNavigation.NomStade)
+            </td>
+            ---------------------------
+        </li>
+    }
+</ul>@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

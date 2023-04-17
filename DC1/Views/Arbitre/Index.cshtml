@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DC1.Models.Arbitre>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+    <h1>Les arbitres</h1>
+   
+</div>
+
+<br />
+<p>
+<a class="btn btn-outline-info" asp-action="Create">Create New</a>
+</p>
+<br />
+
+<table class="table table-success table-striped-columns">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomArbitre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NationaliteArbitre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomArbitre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NationaliteArbitre)
+            </td>
+            <td>
+                    <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.IdArbitre">Edit</a> 
+                    <a class="btn btn-outline-warning" asp-action="Details" asp-route-id="@item.IdArbitre">Details</a> 
+                    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.IdArbitre">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,44 @@
+﻿@model DC1.Models.Arbitre
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+    <h1>Edit</h1>
+
+</div>
+
+<br />
+
+<div class="row">
+    <h4>Arbitre</h4>
+    <hr />
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdArbitre" />
+            <div class="form-group">
+                <label asp-for="NomArbitre" class="control-label"></label>
+                <input asp-for="NomArbitre" class="form-control" />
+                <span asp-validation-for="NomArbitre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NationaliteArbitre" class="control-label"></label>
+                <input asp-for="NationaliteArbitre" class="form-control" />
+                <span asp-validation-for="NationaliteArbitre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br />
+                <input class="btn btn-outline-dark" type="submit" value="Save" class="btn btn-primary" />           <br />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a class="btn btn-outline-warning" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

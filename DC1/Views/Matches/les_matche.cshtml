@@ -1,0 +1,479 @@
+﻿@model IEnumerable<DC1.Models.Match>
+
+@{
+    ViewData["Title"] = "les_matche";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Freelancer - Start Bootstrap Theme</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    <!-- Navigation-->
+    <!--
+    <nav class="navbar navbar-expand-lg          bg-success p-2 text-white       text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+
+
+
+            <a class="btn btn-outline-warning" asp-controller="Matches" asp-action="Index">Back to List</a>
+
+            <a class="btn btn-outline-info" class="text-center" href="#page-top">    Start  </a>
+
+
+
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded  text-white" href="#portfolio">les equipes</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded   text-white" href="#about">les matche</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded     text-white" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    -->
+
+    <!--  Carrousel-->
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="~/assets/img/temp/ita.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+
+
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="~/assets/img/temp/france2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+                <img src="~/assets/img/temp/tunisie.png.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+
+
+
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">les equipes</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="~/assets/img/temp/france.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+
+                        <img class="img-fluid" src="~/assets/img/temp/tunisie.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+
+                        <img class="img-fluid" src="~/assets/img/temp/maroc.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 4-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="~/assets/img/temp/italy.png" alt="..." />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section-->
+    <section class="page-section bg-success p-2 text-white bg-opacity-75" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">les matches</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+
+            <table class="table table-dark table-striped-columns">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                NOM Equipe A
+                            </th>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.ScoreA)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ScoreB)
+                            </th>
+
+                            <th>
+                                NOM Equipe B
+                            </th>
+
+                            <th>
+                                NOM Arbitre
+                            </th>
+
+                            <th>
+                                Stade
+                            </th>
+                      
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IdEquipeANavigation.NomEquipe)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ScoreA)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ScoreB)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IdEquipeBNavigation.NomEquipe)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IdArbitreNavigation.NomArbitre)
+                                </td>
+
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IdStadeNavigation.NomStade)
+                                </td>
+             
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+                Les valeurs du football
+            </h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <p>
+                        Le football doit être une école de vie, au sens large du terme, non seulement pour former des joueurs professionnels et leurs capacités propres à la performance, mais aussi pour aider ces jeunes à s’épanouir sur le plan de leur personnalité. Apprendre aux jeunes à se construire par eux-mêmes, aider les talents cachés en leur permettant de faire ce qu’ils aiment avec leurs qualités propres, telle est la tâche noble et éducative des formateurs.
+
+                    </p>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+   
+
+    <!-- Footer-->
+
+
+   
+    <!-- Portfolio Modals-->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">france</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/temp/france2.jpg" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    L'équipe de France de football, créée en 1904, est l'équipe nationale qui représente la France dans les compétitions internationales masculines de football, sous l'égide de la Fédération française de football (FFF). Elle sélectionne les meilleurs joueurs français. Ces derniers, composant cette équipe, sont traditionnellement appelés Les Tricolores ou encore Les Bleus. De nos jours, c'est cette dernière appellation qui est la plus usitée.
+
+                                    Jusque dans les années 1980, le palmarès de l'équipe de France reste vierge, avec comme meilleur résultat une troisième place obtenue à la Coupe du monde 1958. Après une demi-finale mémorable à la Coupe du monde 1982, perdue contre l'Allemagne fédérale aux tirs au but, elle remporte le Championnat d'Europe 1984 à domicile contre l'Espagne (2-0), ainsi que la Coupe intercontinentale des nations en 1985. L'équipe embellit son palmarès à la fin du xxe siècle. Pays hôte de la Coupe du monde 1998, la France gagne la compétition pour la première fois en battant le Brésil en finale (3-0) le 12 juillet 1998 au stade de France. Avec une formation à l'ossature identique, elle remporte dans la foulée l'Euro 2000 grâce à sa victoire sur l'Italie en finale (2-1, sur un but en or de David Trezeguet), le 2 juillet 2000 au Kuip de Rotterdam (premier doublé Mondial-Euro réalisé dans ce sens)Note 2. Les Bleus s'adjugent encore deux coupes des Confédérations en 2001 et 2003. Ils occupent la première place du classement mondial de la FIFA de mai 2001 à juin 2002. Ils atteignent la finale de la Coupe du monde 2006 en Allemagne, qu'ils perdent aux tirs au but face à l'Italie. Lors de l'Euro 2016 en France, ils éliminent l'Allemagne pour la première fois depuis 58 ans en compétition internationale et disputent la finale lors de laquelle ils sont battus 1-0 a. p. par le Portugal. Enfin les Bleus remportent leur deuxième titre mondial en s'imposant en finale de la Coupe du monde 2018 devant la Croatie (4-2), le 15 juillet 2018 au stade Loujniki de Moscou. La France est alors la seule équipe à avoir disputé quatre finales de Coupe du monde et à en avoir gagné deux sur les sept dernières éditions, mais également six finales majeures (Mondial, Euro) en vingt ans pour trois victoires.
+
+                                    La France est la première sélection à avoir remporté toutes les compétitions internationales : Coupe du monde (1998 et 2018), Coupe des Confédérations (2001, 2003), Jeux olympiques (1984), son championnat continental (1984, 2000). Cette performance est égalée par l'Argentine en 2004 et le Brésil, à l'issue des Jeux de Rio 2016. En 2021, elle ajoute la Ligue des nations à son palmarès, devenant ainsi la première formation européenne, et la seule à ce jour, à avoir gagné l'ensemble de ces trophées.
+
+                                    Depuis 1904, l'équipe de France a été marquée par plusieurs générations de footballeurs talentueux. Celles-ci ont obtenu leurs meilleurs résultats tout d'abord emmenées par les joueurs emblématiques qu'ont été Raymond Kopa de 1952 à 1962, Michel Platini de 1976 à 1987 et Zinédine Zidane entre 1994 et 2006. En 2018, c'est une jeune génération (25 ans de moyenne d'âge), surnommée « génération Griezmann », comptant dans ses rangs Kylian Mbappé, né en 1998, le plus jeune buteur français en Coupe du monde et le deuxième plus jeune joueur après Pelé à marquer en finale, qui apporte à la France sa deuxième étoile. Le capitaine est alors le gardien Hugo Lloris, recordman de capitanats en bleu. Par ailleurs, Didier Deschamps, capitaine des Bleus lors des victoires à la Coupe du monde 1998 et à l'Euro 2000, occupe depuis 2012 le poste de sélectionneur, devenant après Mário Zagallo et Franz Beckenbauer le troisième homme à remporter la Coupe du monde comme joueur puis comme entraîneur. L'équipe de France atteint ainsi la première place du classement mondial de la FIFA au 16 août 2018.
+
+                                    Le coq gaulois est le symbole de l'équipe et ses couleurs sont celles du drapeau national, à savoir le bleu, le blanc et le rouge. Le maillot de l'équipe de France arbore deux étoiles au-dessus du coq qui représentent ses victoires en Coupe du monde 1998 et 2018, comme cela est le cas pour toutes les autres équipes nationales championnes du monde
+
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tunisie</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+
+
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/temp/tunisie.png.jpg" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                   L'équipe de Tunisie de football (arabe : منتخب تونس لكرة القدم) est l'équipe nationale qui représente la Tunisie dans le football international masculin, depuis qu'elle a disputé son premier match le 2 juin 1957 contre la Libye. Membre depuis 1960 de la FIFA au niveau international et de la Confédération africaine de football au niveau continental, ainsi que de l'UAFA depuis 1978 et de l'UNAF depuis 2005, elle est supervisée par la Fédération tunisienne de football, fondée le 29 mars 1957, après l'indépendance de la Tunisie.
+                                   L'équipe connaît des périodes régulières de représentation au plus haut niveau international : de 1962 à 1978, de 1994 à 2008 et à nouveau à partir de 2014. Elle participe ainsi à vingt coupes d'Afrique des nations et quatre tournois olympiques. Elle remporte une coupe d'Afrique des nations en tant que pays hôte en 2004, après avoir battu le Maroc en finale, et obtient également la deuxième place en 1965 (pays hôte) et 1996 et la troisième place en 1962. Le 17 novembre 2020, après s'être qualifiée pour la coupe d'Afrique des nations 2021, la Tunisie devient l'équipe africaine la plus présente de l'histoire de la compétition avec quinze participations consécutives (aucun tournoi manqué depuis l'édition 1994), battant le record de l'Égypte et ses quatorze participations consécutives.
+                                   L'équipe marque par ailleurs l'histoire lors de la coupe du monde 1978, lorsqu'elle devient la première équipe africaine et arabe à remporter un match (en battant le Mexique lors de son premier match) et à obtenir un nul avec le champion en titre, l'Allemagne de l'Ouest, avant d'être éliminée de la phase de groupes, ce qui conduit à l'ajout d'une deuxième équipe pour représenter l'Afrique. L'équipe se qualifie ensuite pour trois coupes du monde consécutives, en 1998, 2002 et 2006, avant de retrouver les éditions 2018 et 20223, sans toutefois jamais réussir à se qualifier pour le deuxième tour de la coupe du monde ou des Jeux olympiques.
+                                   L'équipe entretient des rivalités de longue date avec d'autres équipes nord-africaines : l'Égypte, le Maroc, Libye et l'Algérie. Les joueurs de l'équipe sont surnommés « Aigles de Carthage », leurs couleurs sont le rouge et le blanc, similaires aux couleurs du drapeau tunisien, et leur symbole est le pygargue à tête blanche. La plupart des matchs se jouent depuis 2001 au stade olympique de Radès dans la banlieue sud de la capitale, Tunis.
+                                   Radhi Jaïdi, avec 105 matchs internationaux, détient le record du nombre de matchs disputés par l'équipe nationale tunisienne tandis qu'Issam Jemâa, avec 36 buts, est le meilleur buteur de l'histoire de la sélection. Le rang le plus élevé atteint par l'équipe dans le classement mondial de la FIFA est la 14e place (avril-mai 2018) et le plus bas est la 65e place (juillet 2010). Jalel Kadri entraîne l'équipe depuis le 30 janvier 2022, accompagné de ses adjoints Ali Boumnijel et Selim Benachour.
+
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Maroc</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/temp/eqmar.jpg" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+                                    L'équipe du Maroc de football, surnommée « les Lions de l'Atlas », représente le Maroc dans les compétitions internationales masculines de football. Elle a été créée en 1916 et son premier match officiel a eu lieu après l'indépendance du pays, contre l’équipe d’Irak (score : 3-3) en octobre 1957.
+
+                                    Elle a participé à 18 phases finales de la Coupe d'Afrique des nations, qu'elle a remportée qu’une seule fois en 1976 . Elle est arrivée en finale en 2004 et a été classée 3e en 1980. Au niveau mondial, l'équipe a participé à six phases finales de la Coupe du monde. Lors de la Coupe du monde 1986, l’équipe du Maroc atteint les huitièmes de finale, après avoir terminé première de son groupe. Depuis cet exploit, le Maroc reste l’un des rares pays africains à atteindre ce stade de la compétition. Son meilleur parcours est une place en demi-finale lors de la Coupe du monde 2022, grâce à sa victoire face au Portugal.
+
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 4-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Italie</h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="~/assets/img/temp/ita.jpg" alt="..." />
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4">
+
+                                    L'équipe d'Italie de football (en italien : Nazionale di calcio dell'Italia) est la sélection de joueurs italiens représentant le pays lors des compétitions internationales de football masculin, sous l'égide de la Fédération italienne de football.
+
+                                    La sélection italienne est, derrière l'équipe du Brésil, et avec l'Allemagne, une des trois formations nationales qui comptent le plus grand nombre de victoires en Coupe du monde : quatre, en 1934, 1938, 1982 et 2006. En 1938, l'Italie est devenue la première équipe à défendre son titre de Coupe du monde et, en raison du déclenchement de la Seconde Guerre mondiale, a conservé le titre pendant 16 ans au total. Elle a également atteint la finale en 1970 et en 1994, perdues toutes deux contre le Brésil. L'Italie a par ailleurs remporté les Jeux olympiques en 1936 et le Championnat d'Europe en 1968, à domicile, ainsi qu'en 2020 à Wembley, en Angleterre. Elle a perdu deux autres finales européennes en 2000 et 2012. Elle est classée au 1er rang du classement mondial de la FIFA en novembre 1993 puis à plusieurs reprises pendant l'année 2007. Elle manque quatre éditions de la Coupe du monde : en 1930 (désistement)2, 1958, puis deux fois consécutivement, en 2018 et en 2022.
+
+                                    La sélection italienne détient le record de matchs sans défaite d'affilée (37 matchs, 30 victoires et 7 nuls). La série a débuté le 10 octobre 2018 avec un match nul contre l'Ukraine (1-1) et s'est terminée avec la défaite du 6 octobre 2021 contre l'Espagne (1-2)3.
+
+                                    L'équipe d'Italie est surnommée en France la Squadra azzurra, en référence à la couleur bleue de son maillot, et en Italie la Nazionale ou gli Azzurri.
+
+                                </p>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <i class="fas fa-xmark fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
+
